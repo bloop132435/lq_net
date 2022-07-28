@@ -151,6 +151,7 @@ class BasicBlock(nn.Module):
         else:
             downsample.append(nn.Sequential())
         if inplanes != planes:
+            print("inplanes != planes")
             if 'bacs' in args.keyword:
                 downsample.append(norm(inplanes, args, feature_stride=feature_stride))
                 downsample.append(actv(args))
