@@ -47,6 +47,7 @@ class quantization(nn.Module):
         if self.bit is None:
             self.bit = 32
         if self.num_levels is None or self.num_levels <= 0:
+            self.bit = int(self.bit)
             print(f"bits: {self.bit}")
             print(f"bit type: {type(self.bit)}")
             self.num_levels = int(2 ** self.bit)
