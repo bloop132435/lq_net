@@ -232,7 +232,7 @@ class BasicBlock(nn.Module):
 
         if self.enable_skip:
             residual = self.skip(x)
-        residual = x
+        #  residual = x
         result = None
         for conv1, conv2, bn1, bn2, relu1, relu2, scale in zip(self.conv1, self.conv2, \
                 self.bn1, self.bn2, self.relu1, self.relu2, self.scales):

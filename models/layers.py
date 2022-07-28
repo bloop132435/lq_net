@@ -39,7 +39,7 @@ def seq_b_c_a_s(x, conv, relu, bn, skip=None, skip_enable=False):
     out = conv(out)
     out = relu(out)
     if skip_enable:
-        out += skip
+        out += skip.expand_as(out)
     return out
 
 def seq_b_a_c_s(x, conv, relu, bn, skip=None, skip_enable=False):
@@ -231,7 +231,7 @@ class EltWiseModule(torch.nn.Module):
 
 def add(args):
     return EltWiseModule(args=args)
-    
+
 class Shuffle(nn.Module):
     def __init__(self, groups, args=None):
         super(Shuffle, self).__init__()
@@ -299,7 +299,7 @@ class Shuffle(nn.Module):
                     scale.append(self.args.global_buffer[i])
                 else:
                     self.verbose("warning {} not found in global_buffer".format(i))
-                    
+
             scaled = np.array(scale)
             scaled = scaled.reshape(g, -1).transpose(1, 0).reshape(-1)
             assert len(scaled) == C and ((C % 2) == 0)
@@ -559,7 +559,7 @@ class Split(nn.Module):
                     scale.append(self.args.global_buffer[i])
                 else:
                     self.verbose("warning {} not found in global_buffer".format(i))
-                    
+
             scaled = np.array(scale)
             scaled = scaled.reshape(-1)
             #if self.index in [6, 7]:
