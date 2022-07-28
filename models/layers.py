@@ -50,7 +50,7 @@ def seq_b_a_c_s(x, conv, relu, bn, skip=None, skip_enable=False):
         if len(out.size())==len(skip.size()):
             print(f"out size: {out.size()}")
             print(f"skip size: {skip.size()}")
-            out += torch.nn.functional.interpolate(skip.expand_as(out),out.size())
+            out += torch.nn.functional.interpolate(skip.expand_as(out),torch.Tensor(list(out.size())[-2:]))
     return out
 
 def actv(args=None, negative_slope=0.01, clip_at=None):
