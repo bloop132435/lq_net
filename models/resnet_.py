@@ -178,7 +178,7 @@ class BasicBlock(nn.Module):
                 if isinstance(n, nn.AvgPool2d):
                     downsample[i] = nn.Sequential()
                 if isinstance(n, nn.Conv2d) and inplanes != planes:
-                    bits = self.get_bits()
+                    bits = downsample[i].get_bits()
                     downsample[i] = qconv1x1(inplanes, planes, stride=stride, padding=extra_padding, args=args, force_fp=real_skip,bits_weights=bits,bits_activations=bits)
         if 'DCHR' in args.keyword: # double channel and halve resolution
             if inplanes != planes:
