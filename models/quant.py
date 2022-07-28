@@ -562,6 +562,7 @@ class custom_conv(nn.Conv2d):
         super(custom_conv, self).__init__(in_channels, out_channels, kernel_size, stride=stride, padding=padding, dilation=dilation, groups=groups, bias=bias)
         self.args = args
         self.force_fp = force_fp
+        self.bits=bits_activations
         if not self.force_fp:
             self.pads = padding
             self.padding = (0, 0)
@@ -576,7 +577,8 @@ class custom_conv(nn.Conv2d):
             self.quant_activation.init_based_on_pretrain()
             self.quant_weight.init_based_on_pretrain(self.weight.data)
             self.quant_output.init_based_on_pretrain()
-
+    def get_bits(self):
+        return self.bits
     def update_quantization_parameter(self, **parameters):
         if not self.force_fp:
             feedback = dict()

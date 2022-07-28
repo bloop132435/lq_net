@@ -15,7 +15,7 @@ BasicBlock:
 '''
 class BasicBlock(nn.Module):
     expansion = 1
-    def __init__(self, inplanes, planes, stride=1, args=None, feature_stride=1):
+    def __init__(self, inplanes, planes, stride=1, args=None, feature_stride=1,bits_iter=None):
         super(BasicBlock, self).__init__()
         self.args = args
 
@@ -50,7 +50,7 @@ class BasicBlock(nn.Module):
         else:
             self.seq = None
 
-        if 'bacs' in args.keyword or 'bcas' in args.keyword: 
+        if 'bacs' in args.keyword or 'bcas' in args.keyword:
             self.bn1 = nn.ModuleList([norm(inplanes, args) for j in range(args.base)])
             if 'fix' in self.args.keyword:
                 self.fix_bn = norm(planes, args)
@@ -129,7 +129,7 @@ class BasicBlock(nn.Module):
                     self.bn1 = nn.ModuleList([nn.Sequential() for j in range(args.base)])
                 if sconv3x3 == qprone:
                     self.bn2 = nn.ModuleList([nn.Sequential() for j in range(args.base)])
-                   
+
             if stride != 1 and (args.input_size // feature_stride) % (2*stride) != 0:
                 extra_padding = ((2*stride) - ((args.input_size // feature_stride) % (2*stride))) // 2
                 logging.warning("extra pad of {} for Prone is added".format(extra_padding))
@@ -154,17 +154,20 @@ class BasicBlock(nn.Module):
             if 'bacs' in args.keyword:
                 downsample.append(norm(inplanes, args, feature_stride=feature_stride))
                 downsample.append(actv(args))
-                downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip))
+                tmp_bits = next(bits_iter)
+                downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
                 if 'fix' in args.keyword:
                     downsample.append(norm(planes, args, feature_stride=feature_stride*stride))
             elif 'bcas' in args.keyword:
                 downsample.append(norm(inplanes, args, feature_stride=feature_stride))
-                downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip))
+                tmp_bits = next(bits_iter)
+                downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
                 downsample.append(actv(args))
                 if 'fix' in args.keyword: # remove the ReLU in skip connection
                     downsample.append(norm(planes, args))
             else:
-                downsample.append(qconv1x1(inplanes, planes, args=args, force_fp=real_skip))
+                tmp_bits = next(bits_iter)
+                downsample.append(qconv1x1(inplanes, planes, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
                 downsample.append(norm(planes, args, feature_stride=feature_stride*stride))
                 if 'fix' not in args.keyword:
                     downsample.append(actv(args))
@@ -175,7 +178,8 @@ class BasicBlock(nn.Module):
                 if isinstance(n, nn.AvgPool2d):
                     downsample[i] = nn.Sequential()
                 if isinstance(n, nn.Conv2d) and inplanes != planes:
-                    downsample[i] = qconv1x1(inplanes, planes, stride=stride, padding=extra_padding, args=args, force_fp=real_skip)
+                    bits = self.get_bits()
+                    downsample[i] = qconv1x1(inplanes, planes, stride=stride, padding=extra_padding, args=args, force_fp=real_skip,bits_weights=bits,bits_activations=bits)
         if 'DCHR' in args.keyword: # double channel and halve resolution
             if inplanes != planes:
                 downsample = []
@@ -185,9 +189,10 @@ class BasicBlock(nn.Module):
                 else:
                     downsample.append(concat(nn.ModuleList([nn.Sequential() for i in range(number)])))
         self.skip = nn.Sequential(*downsample)
-
-        self.conv1 = nn.ModuleList([fconv3x3(inplanes, planes, stride=stride, groups=1, padding=extra_padding+1, args=args) for j in range(args.base)])
-        self.conv2 = nn.ModuleList([sconv3x3(planes, planes, stride=1, groups=1, args=args) for j in range(args.base)])
+        tmp_bits= next(bits_iter)
+        self.conv1 = nn.ModuleList([fconv3x3(inplanes, planes, stride=stride, groups=1, padding=extra_padding+1, args=args,bits_activations=tmp_bits,bits_weights=tmp_bits) for j in range(args.base)])
+        tmp_bits= next(bits_iter)
+        self.conv2 = nn.ModuleList([sconv3x3(planes, planes, stride=1, groups=1, args=args,bits_activations=tmp_bits,bits_weights=tmp_bits) for j in range(args.base)])
 
         # scales
         if args.base == 1:
@@ -436,6 +441,10 @@ class ResNet(nn.Module):
     def __init__(self, block, layers, args):
         super(ResNet, self).__init__()
         self.args = args
+        self.bits = args.bits
+        if self.bits is None:
+            self.bits = [8 for _ in range(200000)]
+        self.bits_iter = iter(self.bits)
         assert args is not None, "args is None"
         self.layer_count = len(layers)
         self.inplanes = 64
@@ -555,7 +564,7 @@ class ResNet(nn.Module):
         strides = [stride] + [1]*(blocks-1)
         layers = []
         for stride in strides:
-            layers.append(block(self.inplanes, planes, stride, self.args, feature_stride))
+            layers.append(block(self.inplanes, planes, stride, self.args, feature_stride,bits_iter=self.bits_iter))
             feature_stride = feature_stride * stride
             self.inplanes = planes * block.expansion
         return nn.Sequential(*layers)
@@ -591,7 +600,7 @@ class ResNet(nn.Module):
 
         if hasattr(self, '_out_features') and 'linear' not in self._out_features:
             return outputs
-        
+
         #if 'keep_resolution' in self.args.keyword:
         #    B, C, H, W = x.shape
         #    if H == 8:
