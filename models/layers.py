@@ -39,7 +39,7 @@ def seq_b_c_a_s(x, conv, relu, bn, skip=None, skip_enable=False):
     out = conv(out)
     out = relu(out)
     if skip_enable:
-        out += skip.expand_as(out)
+        out += torch.nn.functional.interpolate(skip,out.size())
     return out
 
 def seq_b_a_c_s(x, conv, relu, bn, skip=None, skip_enable=False):
@@ -47,7 +47,7 @@ def seq_b_a_c_s(x, conv, relu, bn, skip=None, skip_enable=False):
     out = relu(out)
     out = conv(out)
     if skip_enable:
-        out += skip.expand_as(out)
+        out += torch.nn.functional.interpolate(skip,out.size())
     return out
 
 def actv(args=None, negative_slope=0.01, clip_at=None):
