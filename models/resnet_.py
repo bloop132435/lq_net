@@ -193,6 +193,7 @@ class BasicBlock(nn.Module):
                     downsample.append(concat(nn.ModuleList([nn.AvgPool2d(stride) for i in range(number)])))
                 else:
                     downsample.append(concat(nn.ModuleList([nn.Sequential() for i in range(number)])))
+        print(f"downsample: {downsample}")
         self.skip = nn.Sequential(*downsample)
         tmp_bits= next(bits_iter)
         self.conv1 = nn.ModuleList([fconv3x3(inplanes, planes, stride=stride, groups=1, padding=extra_padding+1, args=args,bits_activations=tmp_bits,bits_weights=tmp_bits) for j in range(args.base)])
