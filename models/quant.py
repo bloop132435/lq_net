@@ -563,6 +563,8 @@ class custom_conv(nn.Conv2d):
         self.args = args
         self.force_fp = force_fp
         self.bits=bits_activations
+        if self.bits == 32:
+            self.force_fp = True
         if not self.force_fp:
             self.pads = padding
             self.padding = (0, 0)
