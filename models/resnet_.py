@@ -240,7 +240,7 @@ class BasicBlock(nn.Module):
                 out = self.seq(x, conv1, relu1, bn1, self.fixup_bias1b, True) + self.fixup_bias2a
             else:
                 out = self.seq(x, conv1, relu1, bn1, residual, self.addition_skip)
-            output = self.seq(out, conv2, relu2, bn2, out, self.addition_skip)
+            output = self.seq(out, conv2, relu2, bn2, out, False)
             if result is None:
                 result = scale * output
             else:
