@@ -502,8 +502,8 @@ class ResNet(nn.Module):
                 self.bn1[1] = nn.Sequential()
 
         self.avgpool = nn.AdaptiveAvgPool2d((1,1))
-        self.fc = nn.Linear(outplanes * block.expansion, args.num_classes)
-        self.fc = fully_connected(args,outplanes* block.expansion,args.num_classes,False,next(self.bits_iter),)
+        #  self.linear_layer = nn.Linear(outplanes * block.expansion, args.num_classes)
+        self.linear_layer = fully_connected(args,outplanes* block.expansion,args.num_classes,False,next(self.bits_iter),)
 
         if 'debug' in args.keyword:
             logging.info("Resnet has attr '_out_features' %r" % hasattr(self, '_out_features'))
@@ -625,7 +625,7 @@ class ResNet(nn.Module):
             if 'bias' in self.args.keyword:
                 x = x + self.fixup_bias2
 
-        x = self.fc(x)
+        x = self.linear_layer(x)
         return x
 
 

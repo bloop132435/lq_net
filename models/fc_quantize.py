@@ -1,6 +1,6 @@
 import math
 import sys
-from quant import quantization
+from .quant import quantization
 import logging
 import numpy as np
 import torch
@@ -16,9 +16,10 @@ class fully_connected(nn.Linear):
         if self.bits == 32:
             self.full_precision = True
         if not self.full_precision:
-            self.quant_actv = quantization(args, 'fm',[1,in_channels,1,1])
-            self.quant_wght = quantization(args, 'wt', [out_channels,in_channels,1,1])
-            self.quant_otpt = quantization(args,'ot',[1,out_channels,1,1])
+            self.quant_actv = quantization(args, 'fm',[1,in_channels,1,1],bits=self.bits)
+            self.quant_wght = quantization(args, 'wt', [out_channels,in_channels,1,1],bits=self.bits)
+            self.quant_otpt = quantization(args,'ot',[1,out_channels,1,1],bits=self.bits)
+            print(f"fc bits: {self.bits}")
     def forward(self, inputs):
         if not self.full_precision:
             weight = self.quant_wght(self.weight)
