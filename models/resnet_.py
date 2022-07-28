@@ -239,8 +239,8 @@ class BasicBlock(nn.Module):
             if 'fixup' in self.args.keyword and 'bias' in self.args.keyword:
                 out = self.seq(x, conv1, relu1, bn1, self.fixup_bias1b, True) + self.fixup_bias2a
             else:
-                print(f"skip: {self.skip}")
-                print(f"conv: {conv1}")
+                #  print(f"skip: {self.skip}")
+                #  print(f"conv: {conv1}")
                 out = self.seq(x, conv1, relu1, bn1, residual, self.addition_skip)
             output = self.seq(out, conv2, relu2, bn2, out, False)
             if result is None:
