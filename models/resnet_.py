@@ -233,13 +233,14 @@ class BasicBlock(nn.Module):
         if self.enable_skip:
             residual = self.skip(x)
         #  residual = x
-        print(f"skip: {self.skip}")
         result = None
         for conv1, conv2, bn1, bn2, relu1, relu2, scale in zip(self.conv1, self.conv2, \
                 self.bn1, self.bn2, self.relu1, self.relu2, self.scales):
             if 'fixup' in self.args.keyword and 'bias' in self.args.keyword:
                 out = self.seq(x, conv1, relu1, bn1, self.fixup_bias1b, True) + self.fixup_bias2a
             else:
+                print(f"skip: {self.skip}")
+                print(f"conv: {conv1}")
                 out = self.seq(x, conv1, relu1, bn1, residual, self.addition_skip)
             output = self.seq(out, conv2, relu2, bn2, out, False)
             if result is None:
