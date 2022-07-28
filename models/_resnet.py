@@ -14,6 +14,7 @@ class BasicBlock(nn.Module):
     expansion = 1
     def __init__(self, inplanes, planes, stride=1, args=None, feature_stride=1):
         super(BasicBlock, self).__init__()
+        print("In _ first basicblock")
         self.args = args
 
         for i in range(2):
