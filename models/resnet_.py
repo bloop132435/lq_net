@@ -156,9 +156,9 @@ class BasicBlock(nn.Module):
             if 'bacs' in args.keyword:
                 downsample.append(norm(inplanes, args, feature_stride=feature_stride))
                 downsample.append(actv(args))
-                tmp_bits = next(bits_iter)
+                #  tmp_bits = next(bits_iter)
                 print("downsample conv")
-                downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
+                downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip))
                 if 'fix' in args.keyword:
                     downsample.append(norm(planes, args, feature_stride=feature_stride*stride))
             elif 'bcas' in args.keyword:
@@ -176,24 +176,24 @@ class BasicBlock(nn.Module):
                 downsample.append(norm(planes, args, feature_stride=feature_stride*stride))
                 if 'fix' not in args.keyword:
                     downsample.append(actv(args))
-        elif 'identity_norm' in args.keyword:
-            downsample.append(norm(inplanes, args))
-        if 'singleconv' in args.keyword: # pytorch official branch employ single convolution layer
-            for i, n in enumerate(downsample):
-                if isinstance(n, nn.AvgPool2d):
-                    downsample[i] = nn.Sequential()
-                if isinstance(n, nn.Conv2d) and inplanes != planes:
-                    print("downsample conv")
-                    bits = downsample[i].get_bits()
-                    downsample[i] = qconv1x1(inplanes, planes, stride=stride, padding=extra_padding, args=args, force_fp=real_skip,bits_weights=bits,bits_activations=bits)
-        if 'DCHR' in args.keyword: # double channel and halve resolution
-            if inplanes != planes:
-                downsample = []
-                number = planes // inplanes
-                if stride != 1:
-                    downsample.append(concat(nn.ModuleList([nn.AvgPool2d(stride) for i in range(number)])))
-                else:
-                    downsample.append(concat(nn.ModuleList([nn.Sequential() for i in range(number)])))
+        #  elif 'identity_norm' in args.keyword:
+            #  downsample.append(norm(inplanes, args))
+        #  if 'singleconv' in args.keyword: # pytorch official branch employ single convolution layer
+            #  for i, n in enumerate(downsample):
+                #  if isinstance(n, nn.AvgPool2d):
+                    #  downsample[i] = nn.Sequential()
+                #  if isinstance(n, nn.Conv2d) and inplanes != planes:
+                    #  print("downsample conv")
+                    #  bits = downsample[i].get_bits()
+                    #  downsample[i] = qconv1x1(inplanes, planes, stride=stride, padding=extra_padding, args=args, force_fp=real_skip,bits_weights=bits,bits_activations=bits)
+        #  if 'DCHR' in args.keyword: # double channel and halve resolution
+            #  if inplanes != planes:
+                #  downsample = []
+                #  number = planes // inplanes
+                #  if stride != 1:
+                    #  downsample.append(concat(nn.ModuleList([nn.AvgPool2d(stride) for i in range(number)])))
+                #  else:
+                    #  downsample.append(concat(nn.ModuleList([nn.Sequential() for i in range(number)])))
         self.skip = nn.Sequential(*downsample)
         tmp_bits= next(bits_iter)
         self.conv1 = nn.ModuleList([fconv3x3(inplanes, planes, stride=stride, groups=1, padding=extra_padding+1, args=args,bits_activations=tmp_bits,bits_weights=tmp_bits) for j in range(args.base)])
