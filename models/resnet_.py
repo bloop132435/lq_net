@@ -194,7 +194,6 @@ class BasicBlock(nn.Module):
                     downsample.append(concat(nn.ModuleList([nn.AvgPool2d(stride) for i in range(number)])))
                 else:
                     downsample.append(concat(nn.ModuleList([nn.Sequential() for i in range(number)])))
-        print(f"downsample: {downsample}")
         self.skip = nn.Sequential(*downsample)
         tmp_bits= next(bits_iter)
         self.conv1 = nn.ModuleList([fconv3x3(inplanes, planes, stride=stride, groups=1, padding=extra_padding+1, args=args,bits_activations=tmp_bits,bits_weights=tmp_bits) for j in range(args.base)])
@@ -238,6 +237,7 @@ class BasicBlock(nn.Module):
                 x = x + self.fixup_bias1a
 
         if self.enable_skip:
+
             residual = self.skip(x)
         #  residual = x
         result = None
@@ -246,8 +246,8 @@ class BasicBlock(nn.Module):
             if 'fixup' in self.args.keyword and 'bias' in self.args.keyword:
                 out = self.seq(x, conv1, relu1, bn1, self.fixup_bias1b, True) + self.fixup_bias2a
             else:
-                #  print(f"skip: {self.skip}")
-                #  print(f"conv: {conv1}")
+                print(f"skip: {self.skip}")
+                print(f"conv: {conv1}")
                 out = self.seq(x, conv1, relu1, bn1, residual, self.addition_skip)
             output = self.seq(out, conv2, relu2, bn2, out, False)
             if result is None:
