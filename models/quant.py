@@ -36,7 +36,6 @@ class quantization(nn.Module):
         self.grad_scale = getattr(self.args, self.tag + '_grad_scale', 'none')
         self.grad_type = getattr(args, tag + '_grad_type', 'none')
         self.custom = getattr(args, tag + '_custom', 'none')
-        print(f"Bits: {bits}")
         self.bit = bits
         self.num_levels = getattr(args, tag + '_level', None)
         self.half_range = getattr(args, tag + '_half_range', None)
@@ -48,6 +47,7 @@ class quantization(nn.Module):
         if self.bit is None:
             self.bit = 32
         if self.num_levels is None or self.num_levels <= 0:
+            print(f"bits: {bits}")
             self.num_levels = int(2 ** self.bit)
         self.bit = (int)(self.bit)
         if self.half_range is None:
@@ -135,11 +135,9 @@ class quantization(nn.Module):
 
     def init(self):
         # for LQ-Net
-        print(self.bit)
         if not hasattr(self, 'num_levels'):
             self.num_levels = 2**self.bit
         if self.num_levels > 256:
-            print(f"OVER: {self.bit}")
             raise RuntimeError("currently not support more than 8 bit quantization")
         if self.num_levels == 3:
             self.bit = 1
