@@ -156,18 +156,21 @@ class BasicBlock(nn.Module):
                 downsample.append(norm(inplanes, args, feature_stride=feature_stride))
                 downsample.append(actv(args))
                 tmp_bits = next(bits_iter)
+                print("downsample conv")
                 downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
                 if 'fix' in args.keyword:
                     downsample.append(norm(planes, args, feature_stride=feature_stride*stride))
             elif 'bcas' in args.keyword:
                 downsample.append(norm(inplanes, args, feature_stride=feature_stride))
                 tmp_bits = next(bits_iter)
+                print("downsample conv")
                 downsample.append(qconv1x1(inplanes, planes, stride=1, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
                 downsample.append(actv(args))
                 if 'fix' in args.keyword: # remove the ReLU in skip connection
                     downsample.append(norm(planes, args))
             else:
                 tmp_bits = next(bits_iter)
+                print("downsample conv")
                 downsample.append(qconv1x1(inplanes, planes, args=args, force_fp=real_skip,bits_activations=tmp_bits,bits_weights=tmp_bits))
                 downsample.append(norm(planes, args, feature_stride=feature_stride*stride))
                 if 'fix' not in args.keyword:
@@ -179,6 +182,7 @@ class BasicBlock(nn.Module):
                 if isinstance(n, nn.AvgPool2d):
                     downsample[i] = nn.Sequential()
                 if isinstance(n, nn.Conv2d) and inplanes != planes:
+                    print("downsample conv")
                     bits = downsample[i].get_bits()
                     downsample[i] = qconv1x1(inplanes, planes, stride=stride, padding=extra_padding, args=args, force_fp=real_skip,bits_weights=bits,bits_activations=bits)
         if 'DCHR' in args.keyword: # double channel and halve resolution
