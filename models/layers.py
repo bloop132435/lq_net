@@ -52,7 +52,7 @@ def seq_b_a_c_s(x, conv, relu, bn, skip=None, skip_enable=False):
         #  print()
         #  out += torch.nn.functional.interpolate(skip,tuple(list(out.size())[-2:]),mode='bilinear')
         #  out += skip.resize(out.size())
-        out += skip
+        out += skip[:,:,0:out.size(2),0:out.size(3)]
     return out
 
 def actv(args=None, negative_slope=0.01, clip_at=None):
