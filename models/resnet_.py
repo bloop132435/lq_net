@@ -17,6 +17,7 @@ class BasicBlock(nn.Module):
     expansion = 1
     def __init__(self, inplanes, planes, stride=1, args=None, feature_stride=1,bits_iter=None):
         super(BasicBlock, self).__init__()
+        print("In BasicBlock")
         self.args = args
 
         # Bi-Real structure or original structure
