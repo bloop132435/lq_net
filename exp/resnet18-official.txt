@@ -1,0 +1,166 @@
+2022-07-28 13:13:31 - INFO - current folder: '/Users/gqian/git/lq_net'
+2022-07-28 13:13:31 - INFO - alqnet plugins: False
+2022-07-28 13:13:31 - INFO - apex available: False
+2022-07-28 13:13:31 - INFO - dali available: False
+2022-07-28 13:13:31 - INFO - config dataset: 'cifar10'
+2022-07-28 13:13:31 - INFO - config root: '../../data/cifar10'
+2022-07-28 13:13:31 - INFO - config model: 'resnet18'
+2022-07-28 13:13:31 - INFO - config epochs: 50
+2022-07-28 13:13:31 - INFO - config addition_augment: False
+2022-07-28 13:13:31 - INFO - config workers: 12
+2022-07-28 13:13:31 - INFO - config iter_size: 1
+2022-07-28 13:13:31 - INFO - config batch_size: 100
+2022-07-28 13:13:31 - INFO - config val_batch_size: 100
+2022-07-28 13:13:31 - INFO - config lr: 0.01
+2022-07-28 13:13:31 - INFO - config lr_policy: 'decay'
+2022-07-28 13:13:31 - INFO - config lr_decay: 0.98
+2022-07-28 13:13:31 - INFO - config eta_min: 0
+2022-07-28 13:13:31 - INFO - config lr_fix_step: 30
+2022-07-28 13:13:31 - INFO - config lr_custom_step: [20, 30, 40]
+2022-07-28 13:13:31 - INFO - config momentum: 0.9
+2022-07-28 13:13:31 - INFO - config weight_decay: 0.0001
+2022-07-28 13:13:31 - INFO - config nesterov: False
+2022-07-28 13:13:31 - INFO - config no_decay_small: True
+2022-07-28 13:13:31 - INFO - config decay_small: False
+2022-07-28 13:13:31 - INFO - config grad_clip: None
+2022-07-28 13:13:31 - INFO - config save_freq: 1
+2022-07-28 13:13:31 - INFO - config report_freq: 20
+2022-07-28 13:13:31 - INFO - config seed: 2
+2022-07-28 13:13:31 - INFO - config optimizer: 'SGD'
+2022-07-28 13:13:31 - INFO - config device_ids: [0, 1, 2, 3]
+2022-07-28 13:13:31 - INFO - config distributed: False
+2022-07-28 13:13:31 - INFO - config world_size: 1
+2022-07-28 13:13:31 - INFO - config rank: 0
+2022-07-28 13:13:31 - INFO - config fp16: False
+2022-07-28 13:13:31 - INFO - config sync_bn: False
+2022-07-28 13:13:31 - INFO - config opt_level: 'O0'
+2022-07-28 13:13:31 - INFO - config wakeup: 0
+2022-07-28 13:13:31 - INFO - config wakeup_epoch: 0
+2022-07-28 13:13:31 - INFO - config wakeup_lr: 0
+2022-07-28 13:13:31 - INFO - config stable: 0
+2022-07-28 13:13:31 - INFO - config stable_epoch: 0
+2022-07-28 13:13:31 - INFO - config extra_epoch: 0
+2022-07-28 13:13:31 - INFO - config delay: 0.0
+2022-07-28 13:13:31 - INFO - config evaluate: False
+2022-07-28 13:13:31 - INFO - config pretrained: ''
+2022-07-28 13:13:31 - INFO - config resume: False
+2022-07-28 13:13:31 - INFO - config resume_file: 'checkpoint.pth.tar'
+2022-07-28 13:13:31 - INFO - config weights_dir: './weights/'
+2022-07-28 13:13:31 - INFO - config unresume_scope: ''
+2022-07-28 13:13:31 - INFO - config log_dir: 'exp'
+2022-07-28 13:13:31 - INFO - config tensorboard: False
+2022-07-28 13:13:31 - INFO - config verbose: False
+2022-07-28 13:13:31 - INFO - config distill_teacher: ''
+2022-07-28 13:13:31 - INFO - config distill_loss_alpha: 0.1
+2022-07-28 13:13:31 - INFO - config distill_loss_temperature: 5
+2022-07-28 13:13:31 - INFO - config distill_loss_type: 'soft'
+2022-07-28 13:13:31 - INFO - config repvgg_block: ''
+2022-07-28 13:13:31 - INFO - config case: 'official'
+2022-07-28 13:13:31 - INFO - config keyword: ['cifar10', 'bacs', 'lq']
+2022-07-28 13:13:31 - INFO - config focal_gamma: 2.0
+2022-07-28 13:13:31 - INFO - config focal_alpha: -1.0
+2022-07-28 13:13:31 - INFO - config cmd: 'rclone+copy+LOG+DST'
+2022-07-28 13:13:31 - INFO - config mean: None
+2022-07-28 13:13:31 - INFO - config std: None
+2022-07-28 13:13:31 - INFO - config num_classes: None
+2022-07-28 13:13:31 - INFO - config input_size: None
+2022-07-28 13:13:31 - INFO - config base: 1
+2022-07-28 13:13:31 - INFO - config width_alpha: 1.0
+2022-07-28 13:13:31 - INFO - config block_alpha: 1.0
+2022-07-28 13:13:31 - INFO - config se_reduction: 16
+2022-07-28 13:13:31 - INFO - config stem_kernel: 1
+2022-07-28 13:13:31 - INFO - config order: 'none'
+2022-07-28 13:13:31 - INFO - config policy: 'none'
+2022-07-28 13:13:31 - INFO - config fm_bit: 8.0
+2022-07-28 13:13:31 - INFO - config fm_level: None
+2022-07-28 13:13:31 - INFO - config fm_half_range: True
+2022-07-28 13:13:31 - INFO - config fm_separator: 0.38
+2022-07-28 13:13:31 - INFO - config fm_correlate: -1
+2022-07-28 13:13:31 - INFO - config fm_ratio: 1
+2022-07-28 13:13:31 - INFO - config fm_scale: 0.5
+2022-07-28 13:13:31 - INFO - config fm_enable: True
+2022-07-28 13:13:31 - INFO - config fm_boundary: None
+2022-07-28 13:13:31 - INFO - config fm_quant_group: None
+2022-07-28 13:13:31 - INFO - config fm_adaptive: 'none'
+2022-07-28 13:13:31 - INFO - config fm_custom: 'none'
+2022-07-28 13:13:31 - INFO - config fm_grad_type: 'none'
+2022-07-28 13:13:31 - INFO - config fm_grad_scale: 'none'
+2022-07-28 13:13:31 - INFO - config wt_bit: 7.0
+2022-07-28 13:13:31 - INFO - config wt_level: None
+2022-07-28 13:13:31 - INFO - config wt_half_range: False
+2022-07-28 13:13:31 - INFO - config wt_separator: 0.38
+2022-07-28 13:13:31 - INFO - config wt_correlate: -1
+2022-07-28 13:13:31 - INFO - config wt_ratio: 1
+2022-07-28 13:13:31 - INFO - config wt_scale: 0.5
+2022-07-28 13:13:31 - INFO - config wt_enable: True
+2022-07-28 13:13:31 - INFO - config wt_boundary: None
+2022-07-28 13:13:31 - INFO - config wt_quant_group: None
+2022-07-28 13:13:31 - INFO - config wt_adaptive: 'none'
+2022-07-28 13:13:31 - INFO - config wt_grad_type: 'none'
+2022-07-28 13:13:31 - INFO - config wt_grad_scale: 'none'
+2022-07-28 13:13:31 - INFO - config bits: ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5']
+2022-07-28 13:13:31 - INFO - config ot_bit: None
+2022-07-28 13:13:31 - INFO - config ot_level: None
+2022-07-28 13:13:31 - INFO - config ot_half_range: False
+2022-07-28 13:13:31 - INFO - config ot_separator: 0.38
+2022-07-28 13:13:31 - INFO - config ot_correlate: -1
+2022-07-28 13:13:31 - INFO - config ot_ratio: 1
+2022-07-28 13:13:31 - INFO - config ot_scale: 0.5
+2022-07-28 13:13:31 - INFO - config ot_enable: False
+2022-07-28 13:13:31 - INFO - config ot_boundary: None
+2022-07-28 13:13:31 - INFO - config ot_quant_group: None
+2022-07-28 13:13:31 - INFO - config ot_adaptive: 'none'
+2022-07-28 13:13:31 - INFO - config ot_grad_type: 'none'
+2022-07-28 13:13:31 - INFO - config ot_grad_scale: 'none'
+2022-07-28 13:13:31 - INFO - config ot_independent_parameter: False
+2022-07-28 13:13:31 - INFO - config re_init: False
+2022-07-28 13:13:31 - INFO - config proxquant_step: 5
+2022-07-28 13:13:31 - INFO - config mixup_alpha: 0.7
+2022-07-28 13:13:31 - INFO - config mixup_enable: False
+2022-07-28 13:13:31 - INFO - config padding_after_quant: False
+2022-07-28 13:13:31 - INFO - config probe_iteration: 1
+2022-07-28 13:13:31 - INFO - config probe_index: []
+2022-07-28 13:13:31 - INFO - config probe_list: ['']
+2022-07-28 13:13:31 - INFO - config label_smooth: 0.1
+2022-07-28 13:13:31 - INFO - config custom_decay_list: ['']
+2022-07-28 13:13:31 - INFO - config custom_decay: 0.02
+2022-07-28 13:13:31 - INFO - config custom_lr_list: ['']
+2022-07-28 13:13:31 - INFO - config custom_lr: 1e-05
+2022-07-28 13:13:31 - INFO - config global_buffer: {}
+2022-07-28 13:13:31 - INFO - no gpu available, try CPU version, lots of functions limited
+2022-07-28 13:13:31 - INFO - update fm_bit 8.0
+2022-07-28 13:13:31 - INFO - update wt_bit 7.0
+2022-07-28 13:13:31 - INFO - update num_classes 10
+2022-07-28 13:13:31 - INFO - update input_size 32
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-28 13:13:31 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-28 13:13:31 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)

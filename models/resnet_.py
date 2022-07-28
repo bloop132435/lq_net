@@ -8,6 +8,7 @@ from .quant import conv3x3, conv1x1, conv0x0
 from .layers import norm, actv, TResNetStem, concat
 from .layers import seq_c_b_a_s, seq_c_b_s_a, seq_c_a_b_s, seq_b_c_a_s, seq_b_a_c_s
 from .prone import qprone
+from .fc_quantize import fully_connected
 
 '''
 BasicBlock:
@@ -502,6 +503,7 @@ class ResNet(nn.Module):
 
         self.avgpool = nn.AdaptiveAvgPool2d((1,1))
         self.fc = nn.Linear(outplanes * block.expansion, args.num_classes)
+        self.fc = fully_connected(args,outplanes* block.expansion,args.num_classes,False,next(self.bits_iter),)
 
         if 'debug' in args.keyword:
             logging.info("Resnet has attr '_out_features' %r" % hasattr(self, '_out_features'))
@@ -566,6 +568,8 @@ class ResNet(nn.Module):
                 elif isinstance(m, nn.Linear):
                     nn.init.constant_(m.weight, 0)
                     nn.init.constant_(m.bias, 0)
+        print(f"bits iter: {self.bits_iter}")
+        print(f"len bits iter: {sum(1 for _ in self.bits_iter)}")
 
     def _make_layer(self, block, planes, blocks, stride=1, feature_stride=1):
         strides = [stride] + [1]*(blocks-1)

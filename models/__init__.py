@@ -10,27 +10,28 @@ try:
 
     #from .vgg import vgg16_bn as pytorch_vgg16bn
     from .vgg_small_ import vgg_small
-    
+
     #from .alexnet_ import alexnet as alexnet_  # revise from XNOR-Net-PyTorch
     from .nin_ import nin as nin_
-    
-    #from .mobilenet import mobilenetv2, mobilenetv1
 
-    #from .densenet import densenet121
-    #from .nasnet import nasnet
-    #from .squeezenet import squeezenet
+    from .mobilenet import mobilenetv2, mobilenetv1
 
-    from . import policy 
+    #  from .densenet import densenet121
+    #  from .nasnet import nasnet
+    #  from .squeezenet import squeezenet
+
+    from . import policy
 except (ImportError, RuntimeError, FileNotFoundError, PermissionError) as e:
+    print("Can't import models")
     print('import classification model failed', e)
 
-third_party = True
-try:
-    from third_party import model_zoo as third_party_model_zoo
-    from third_party import get_model as third_party_get_model
-except (ImportError, RuntimeError, FileNotFoundError, PermissionError) as e:
-    print('loading third party model failed', e)
-    third_party = False
+#  third_party = True
+#  try:
+    #  from third_party import model_zoo as third_party_model_zoo
+    #  from third_party import get_model as third_party_get_model
+#  except (ImportError, RuntimeError, FileNotFoundError, PermissionError) as e:
+    #  print('loading third party model failed', e)
+    #  third_party = False
 
 model_zoo = [
   'pytorch-resnet18',
@@ -60,12 +61,12 @@ model_zoo = [
   'vgg_small'
   ]
 
-if third_party:
-    model_zoo += third_party_model_zoo
+#  if third_party:
+    #  model_zoo += third_party_model_zoo
 
 def get_model(args):
-    if third_party and args.model in third_party_model_zoo:
-        return third_party_get_model(args)
+    #  if third_party and args.model in third_party_model_zoo:
+        #  return third_party_get_model(args)
 
     if 'cifar10' in args.keyword:
         num_classes = 10
