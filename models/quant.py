@@ -36,6 +36,7 @@ class quantization(nn.Module):
         self.grad_scale = getattr(self.args, self.tag + '_grad_scale', 'none')
         self.grad_type = getattr(args, tag + '_grad_type', 'none')
         self.custom = getattr(args, tag + '_custom', 'none')
+        print(f"Bits: {bits}")
         self.bit = bits
         self.num_levels = getattr(args, tag + '_level', None)
         self.half_range = getattr(args, tag + '_half_range', None)
