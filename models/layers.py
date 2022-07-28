@@ -47,6 +47,9 @@ def seq_b_a_c_s(x, conv, relu, bn, skip=None, skip_enable=False):
     out = relu(out)
     out = conv(out)
     if skip_enable:
+        print(out.size())
+        print(skip.size())
+        print()
         out += torch.nn.functional.interpolate(skip,tuple(list(out.size())[-2:]))
     return out
 
