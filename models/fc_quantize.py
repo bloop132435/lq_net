@@ -1,12 +1,14 @@
+import logging
 import math
 import sys
-from .quant import quantization
-import logging
+
 import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.modules.utils import _quadruple
+
+from .quant import quantization
 
 class fully_connected(nn.Linear):
     def __init__(self,args,in_channels,out_channels,fp=False,bits=32):

@@ -53,15 +53,15 @@ options=''
 
 
 python main.py --dataset cifar10 --root $FASTDIR/data/cifar10 \
-  --model resnet18 --base 1 \
+  --model resnet20 --base 1 \
   --epochs 50 -b 100 -v 100 \
   --case official --keyword cifar10,bacs,lq \
   --delay 0 \
   --fm_bit 8 --wt_bit 7 --fm_enable --wt_enable\
   --workers 15 --save_freq 1\
   $options \
-  --bits 5 4 4 4 3 4 3 4 3 3 3 3 3 3 3 3 8
-
+  --bits 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
 
 # previous bits
-# --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8
+# 1 --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8 DNF
+# 2 --bits 5 4 4 4 3 4 3 4 3 3 3 3 3 3 3 3 8 = 87.09%

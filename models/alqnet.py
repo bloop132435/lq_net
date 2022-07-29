@@ -11,7 +11,6 @@ __EPS__ = 1e-5
 
 ## LQ-net
 class LqNet_fm(torch.autograd.Function):
-    # TODO this this always results in new_basis == [0,0...], so basis just decreases from update_bias every time
     @staticmethod
     def forward(ctx, inputs, basis, codec_vector, codec_index, thrs_multiplier, training=True, half_range=False, auxil=None, adaptive='none'):
         num_levels = codec_vector.shape[0]
