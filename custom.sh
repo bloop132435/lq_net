@@ -60,7 +60,7 @@ python main.py --dataset cifar10 --root $FASTDIR/data/cifar10 \
   --fm_bit 8 --wt_bit 7 --fm_enable --wt_enable\
   --workers 15 --save_freq 1\
   $options \
-  --bits 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+  --bits 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
 
 # previous bits
 # 1 --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8 DNF
