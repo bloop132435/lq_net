@@ -58,7 +58,7 @@ python main.py --dataset cifar10 --root $FASTDIR/data/cifar10 \
   --case official --keyword cifar10,bacs,lq \
   --delay 0 \
   --fm_bit 8 --wt_bit 7 --fm_enable --wt_enable\
-  --workers 15 \
+  --workers 15 --save_freq 1\
   $options \
   --bits 5 4 4 4 3 4 3 4 3 3 3 3 3 3 3 3 8
 
