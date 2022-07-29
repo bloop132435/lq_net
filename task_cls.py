@@ -1,5 +1,6 @@
 import argparse
 from typing import List
+import torch.multiprocessing as mp
 import glob
 import logging
 import os
@@ -172,6 +173,7 @@ def get_parameter():
     return args
 
 def main(args=None):
+    mp.set_start_method("spawn", force=True)
     if args is None:
         args = get_parameter()
 

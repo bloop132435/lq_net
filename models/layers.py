@@ -662,5 +662,3 @@ class Concat(nn.Module):
 
 def concat(args=None):
     return Concat(args=args)
-
-

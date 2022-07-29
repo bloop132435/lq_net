@@ -1,220 +1,220 @@
-2022-07-29 07:15:09 - INFO - current folder: '/Users/gqian/git/lq_net'
-2022-07-29 07:15:09 - INFO - alqnet plugins: False
-2022-07-29 07:15:09 - INFO - apex available: False
-2022-07-29 07:15:09 - INFO - dali available: False
-2022-07-29 07:15:09 - INFO - config dataset: 'cifar10'
-2022-07-29 07:15:09 - INFO - config root: '../../data/cifar10'
-2022-07-29 07:15:09 - INFO - config model: 'resnet18'
-2022-07-29 07:15:09 - INFO - config epochs: 50
-2022-07-29 07:15:09 - INFO - config addition_augment: False
-2022-07-29 07:15:09 - INFO - config workers: 10
-2022-07-29 07:15:09 - INFO - config iter_size: 1
-2022-07-29 07:15:09 - INFO - config batch_size: 100
-2022-07-29 07:15:09 - INFO - config val_batch_size: 100
-2022-07-29 07:15:09 - INFO - config lr: 0.01
-2022-07-29 07:15:09 - INFO - config lr_policy: 'decay'
-2022-07-29 07:15:09 - INFO - config lr_decay: 0.98
-2022-07-29 07:15:09 - INFO - config eta_min: 0
-2022-07-29 07:15:09 - INFO - config lr_fix_step: 30
-2022-07-29 07:15:09 - INFO - config lr_custom_step: [20, 30, 40]
-2022-07-29 07:15:09 - INFO - config momentum: 0.9
-2022-07-29 07:15:09 - INFO - config weight_decay: 0.0001
-2022-07-29 07:15:09 - INFO - config nesterov: False
-2022-07-29 07:15:09 - INFO - config no_decay_small: True
-2022-07-29 07:15:09 - INFO - config decay_small: False
-2022-07-29 07:15:09 - INFO - config grad_clip: None
-2022-07-29 07:15:09 - INFO - config save_freq: -1
-2022-07-29 07:15:09 - INFO - config report_freq: 20
-2022-07-29 07:15:09 - INFO - config seed: 2
-2022-07-29 07:15:09 - INFO - config optimizer: 'SGD'
-2022-07-29 07:15:09 - INFO - config device_ids: [0, 1, 2, 3]
-2022-07-29 07:15:09 - INFO - config distributed: False
-2022-07-29 07:15:09 - INFO - config world_size: 1
-2022-07-29 07:15:09 - INFO - config rank: 0
-2022-07-29 07:15:09 - INFO - config fp16: False
-2022-07-29 07:15:09 - INFO - config sync_bn: False
-2022-07-29 07:15:09 - INFO - config opt_level: 'O0'
-2022-07-29 07:15:09 - INFO - config wakeup: 0
-2022-07-29 07:15:09 - INFO - config wakeup_epoch: 0
-2022-07-29 07:15:09 - INFO - config wakeup_lr: 0
-2022-07-29 07:15:09 - INFO - config stable: 0
-2022-07-29 07:15:09 - INFO - config stable_epoch: 0
-2022-07-29 07:15:09 - INFO - config extra_epoch: 0
-2022-07-29 07:15:09 - INFO - config delay: 0.0
-2022-07-29 07:15:09 - INFO - config evaluate: False
-2022-07-29 07:15:09 - INFO - config pretrained: ''
-2022-07-29 07:15:09 - INFO - config resume: False
-2022-07-29 07:15:09 - INFO - config resume_file: 'checkpoint.pth.tar'
-2022-07-29 07:15:09 - INFO - config weights_dir: './weights/'
-2022-07-29 07:15:09 - INFO - config unresume_scope: ''
-2022-07-29 07:15:09 - INFO - config log_dir: 'exp'
-2022-07-29 07:15:09 - INFO - config tensorboard: False
-2022-07-29 07:15:09 - INFO - config verbose: False
-2022-07-29 07:15:09 - INFO - config distill_teacher: ''
-2022-07-29 07:15:09 - INFO - config distill_loss_alpha: 0.1
-2022-07-29 07:15:09 - INFO - config distill_loss_temperature: 5
-2022-07-29 07:15:09 - INFO - config distill_loss_type: 'soft'
-2022-07-29 07:15:09 - INFO - config repvgg_block: ''
-2022-07-29 07:15:09 - INFO - config case: 'official'
-2022-07-29 07:15:09 - INFO - config keyword: ['cifar10', 'bacs', 'lq']
-2022-07-29 07:15:09 - INFO - config focal_gamma: 2.0
-2022-07-29 07:15:09 - INFO - config focal_alpha: -1.0
-2022-07-29 07:15:09 - INFO - config cmd: 'rclone+copy+LOG+DST'
-2022-07-29 07:15:09 - INFO - config mean: None
-2022-07-29 07:15:09 - INFO - config std: None
-2022-07-29 07:15:09 - INFO - config num_classes: None
-2022-07-29 07:15:09 - INFO - config input_size: None
-2022-07-29 07:15:09 - INFO - config base: 1
-2022-07-29 07:15:09 - INFO - config width_alpha: 1.0
-2022-07-29 07:15:09 - INFO - config block_alpha: 1.0
-2022-07-29 07:15:09 - INFO - config se_reduction: 16
-2022-07-29 07:15:09 - INFO - config stem_kernel: 1
-2022-07-29 07:15:09 - INFO - config order: 'none'
-2022-07-29 07:15:09 - INFO - config policy: 'none'
-2022-07-29 07:15:09 - INFO - config fm_bit: 8.0
-2022-07-29 07:15:09 - INFO - config fm_level: None
-2022-07-29 07:15:09 - INFO - config fm_half_range: True
-2022-07-29 07:15:09 - INFO - config fm_separator: 0.38
-2022-07-29 07:15:09 - INFO - config fm_correlate: -1
-2022-07-29 07:15:09 - INFO - config fm_ratio: 1
-2022-07-29 07:15:09 - INFO - config fm_scale: 0.5
-2022-07-29 07:15:09 - INFO - config fm_enable: True
-2022-07-29 07:15:09 - INFO - config fm_boundary: None
-2022-07-29 07:15:09 - INFO - config fm_quant_group: None
-2022-07-29 07:15:09 - INFO - config fm_adaptive: 'none'
-2022-07-29 07:15:09 - INFO - config fm_custom: 'none'
-2022-07-29 07:15:09 - INFO - config fm_grad_type: 'none'
-2022-07-29 07:15:09 - INFO - config fm_grad_scale: 'none'
-2022-07-29 07:15:09 - INFO - config wt_bit: 7.0
-2022-07-29 07:15:09 - INFO - config wt_level: None
-2022-07-29 07:15:09 - INFO - config wt_half_range: False
-2022-07-29 07:15:09 - INFO - config wt_separator: 0.38
-2022-07-29 07:15:09 - INFO - config wt_correlate: -1
-2022-07-29 07:15:09 - INFO - config wt_ratio: 1
-2022-07-29 07:15:09 - INFO - config wt_scale: 0.5
-2022-07-29 07:15:09 - INFO - config wt_enable: True
-2022-07-29 07:15:09 - INFO - config wt_boundary: None
-2022-07-29 07:15:09 - INFO - config wt_quant_group: None
-2022-07-29 07:15:09 - INFO - config wt_adaptive: 'none'
-2022-07-29 07:15:09 - INFO - config wt_grad_type: 'none'
-2022-07-29 07:15:09 - INFO - config wt_grad_scale: 'none'
-2022-07-29 07:15:09 - INFO - config bits: ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '8']
-2022-07-29 07:15:09 - INFO - config ot_bit: None
-2022-07-29 07:15:09 - INFO - config ot_level: None
-2022-07-29 07:15:09 - INFO - config ot_half_range: False
-2022-07-29 07:15:09 - INFO - config ot_separator: 0.38
-2022-07-29 07:15:09 - INFO - config ot_correlate: -1
-2022-07-29 07:15:09 - INFO - config ot_ratio: 1
-2022-07-29 07:15:09 - INFO - config ot_scale: 0.5
-2022-07-29 07:15:09 - INFO - config ot_enable: False
-2022-07-29 07:15:09 - INFO - config ot_boundary: None
-2022-07-29 07:15:09 - INFO - config ot_quant_group: None
-2022-07-29 07:15:09 - INFO - config ot_adaptive: 'none'
-2022-07-29 07:15:09 - INFO - config ot_grad_type: 'none'
-2022-07-29 07:15:09 - INFO - config ot_grad_scale: 'none'
-2022-07-29 07:15:09 - INFO - config ot_independent_parameter: False
-2022-07-29 07:15:09 - INFO - config re_init: False
-2022-07-29 07:15:09 - INFO - config proxquant_step: 5
-2022-07-29 07:15:09 - INFO - config mixup_alpha: 0.7
-2022-07-29 07:15:09 - INFO - config mixup_enable: False
-2022-07-29 07:15:09 - INFO - config padding_after_quant: False
-2022-07-29 07:15:09 - INFO - config probe_iteration: 1
-2022-07-29 07:15:09 - INFO - config probe_index: []
-2022-07-29 07:15:09 - INFO - config probe_list: ['']
-2022-07-29 07:15:09 - INFO - config label_smooth: 0.1
-2022-07-29 07:15:09 - INFO - config custom_decay_list: ['']
-2022-07-29 07:15:09 - INFO - config custom_decay: 0.02
-2022-07-29 07:15:09 - INFO - config custom_lr_list: ['']
-2022-07-29 07:15:09 - INFO - config custom_lr: 1e-05
-2022-07-29 07:15:09 - INFO - config global_buffer: {}
-2022-07-29 07:15:09 - INFO - no gpu available, try CPU version, lots of functions limited
-2022-07-29 07:15:09 - INFO - update fm_bit 8.0
-2022-07-29 07:15:09 - INFO - update wt_bit 7.0
-2022-07-29 07:15:09 - INFO - update num_classes 10
-2022-07-29 07:15:09 - INFO - update input_size 32
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - half_range(True), bit(8), num_levels(256), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
-2022-07-29 07:15:09 - INFO - half_range(False), bit(8), num_levels(256), quant_group(10) boundary(None) scale(0.5) ratio(1) tag(wt)
-2022-07-29 07:15:09 - INFO - update fm_index 0
-2022-07-29 07:15:09 - INFO - update wt_index 0
-2022-07-29 07:15:09 - INFO - update ot_index 0
-2022-07-29 07:15:09 - INFO - update fm_index 1
-2022-07-29 07:15:09 - INFO - update wt_index 1
-2022-07-29 07:15:09 - INFO - update ot_index 1
-2022-07-29 07:15:09 - INFO - update fm_index 2
-2022-07-29 07:15:09 - INFO - update wt_index 2
-2022-07-29 07:15:09 - INFO - update ot_index 2
-2022-07-29 07:15:09 - INFO - update fm_index 3
-2022-07-29 07:15:09 - INFO - update wt_index 3
-2022-07-29 07:15:09 - INFO - update ot_index 3
-2022-07-29 07:15:09 - INFO - update fm_index 5
-2022-07-29 07:15:09 - INFO - update wt_index 5
-2022-07-29 07:15:09 - INFO - update ot_index 5
-2022-07-29 07:15:09 - INFO - update fm_index 6
-2022-07-29 07:15:09 - INFO - update wt_index 6
-2022-07-29 07:15:09 - INFO - update ot_index 6
-2022-07-29 07:15:09 - INFO - update fm_index 7
-2022-07-29 07:15:09 - INFO - update wt_index 7
-2022-07-29 07:15:09 - INFO - update ot_index 7
-2022-07-29 07:15:09 - INFO - update fm_index 8
-2022-07-29 07:15:09 - INFO - update wt_index 8
-2022-07-29 07:15:09 - INFO - update ot_index 8
-2022-07-29 07:15:09 - INFO - update fm_index 10
-2022-07-29 07:15:09 - INFO - update wt_index 10
-2022-07-29 07:15:09 - INFO - update ot_index 10
-2022-07-29 07:15:09 - INFO - update fm_index 11
-2022-07-29 07:15:09 - INFO - update wt_index 11
-2022-07-29 07:15:09 - INFO - update ot_index 11
-2022-07-29 07:15:09 - INFO - update fm_index 12
-2022-07-29 07:15:09 - INFO - update wt_index 12
-2022-07-29 07:15:09 - INFO - update ot_index 12
-2022-07-29 07:15:09 - INFO - update fm_index 13
-2022-07-29 07:15:09 - INFO - update wt_index 13
-2022-07-29 07:15:09 - INFO - update ot_index 13
-2022-07-29 07:15:09 - INFO - update fm_index 15
-2022-07-29 07:15:09 - INFO - update wt_index 15
-2022-07-29 07:15:09 - INFO - update ot_index 15
-2022-07-29 07:15:09 - INFO - update fm_index 16
-2022-07-29 07:15:09 - INFO - update wt_index 16
-2022-07-29 07:15:09 - INFO - update ot_index 16
-2022-07-29 07:15:09 - INFO - update fm_index 17
-2022-07-29 07:15:09 - INFO - update wt_index 17
-2022-07-29 07:15:09 - INFO - update ot_index 17
-2022-07-29 07:15:09 - INFO - update fm_index 18
-2022-07-29 07:15:09 - INFO - update wt_index 18
-2022-07-29 07:15:09 - INFO - update ot_index 18
-2022-07-29 07:15:09 - INFO - models: ResNet(
+2022-07-29 09:33:30 - INFO - current folder: '/Users/gqian/git/lq_net'
+2022-07-29 09:33:30 - INFO - alqnet plugins: False
+2022-07-29 09:33:30 - INFO - apex available: False
+2022-07-29 09:33:30 - INFO - dali available: False
+2022-07-29 09:33:30 - INFO - config dataset: 'cifar10'
+2022-07-29 09:33:30 - INFO - config root: '../../data/cifar10'
+2022-07-29 09:33:30 - INFO - config model: 'resnet18'
+2022-07-29 09:33:30 - INFO - config epochs: 50
+2022-07-29 09:33:30 - INFO - config addition_augment: False
+2022-07-29 09:33:30 - INFO - config workers: 10
+2022-07-29 09:33:30 - INFO - config iter_size: 1
+2022-07-29 09:33:30 - INFO - config batch_size: 100
+2022-07-29 09:33:30 - INFO - config val_batch_size: 100
+2022-07-29 09:33:30 - INFO - config lr: 0.01
+2022-07-29 09:33:30 - INFO - config lr_policy: 'decay'
+2022-07-29 09:33:30 - INFO - config lr_decay: 0.98
+2022-07-29 09:33:30 - INFO - config eta_min: 0
+2022-07-29 09:33:30 - INFO - config lr_fix_step: 30
+2022-07-29 09:33:30 - INFO - config lr_custom_step: [20, 30, 40]
+2022-07-29 09:33:30 - INFO - config momentum: 0.9
+2022-07-29 09:33:30 - INFO - config weight_decay: 0.0001
+2022-07-29 09:33:30 - INFO - config nesterov: False
+2022-07-29 09:33:30 - INFO - config no_decay_small: True
+2022-07-29 09:33:30 - INFO - config decay_small: False
+2022-07-29 09:33:30 - INFO - config grad_clip: None
+2022-07-29 09:33:30 - INFO - config save_freq: -1
+2022-07-29 09:33:30 - INFO - config report_freq: 20
+2022-07-29 09:33:30 - INFO - config seed: 2
+2022-07-29 09:33:30 - INFO - config optimizer: 'SGD'
+2022-07-29 09:33:30 - INFO - config device_ids: [0, 1, 2, 3]
+2022-07-29 09:33:30 - INFO - config distributed: False
+2022-07-29 09:33:30 - INFO - config world_size: 1
+2022-07-29 09:33:30 - INFO - config rank: 0
+2022-07-29 09:33:30 - INFO - config fp16: False
+2022-07-29 09:33:30 - INFO - config sync_bn: False
+2022-07-29 09:33:30 - INFO - config opt_level: 'O0'
+2022-07-29 09:33:30 - INFO - config wakeup: 0
+2022-07-29 09:33:30 - INFO - config wakeup_epoch: 0
+2022-07-29 09:33:30 - INFO - config wakeup_lr: 0
+2022-07-29 09:33:30 - INFO - config stable: 0
+2022-07-29 09:33:30 - INFO - config stable_epoch: 0
+2022-07-29 09:33:30 - INFO - config extra_epoch: 0
+2022-07-29 09:33:30 - INFO - config delay: 0.0
+2022-07-29 09:33:30 - INFO - config evaluate: False
+2022-07-29 09:33:30 - INFO - config pretrained: ''
+2022-07-29 09:33:30 - INFO - config resume: False
+2022-07-29 09:33:30 - INFO - config resume_file: 'checkpoint.pth.tar'
+2022-07-29 09:33:30 - INFO - config weights_dir: './weights/'
+2022-07-29 09:33:30 - INFO - config unresume_scope: ''
+2022-07-29 09:33:30 - INFO - config log_dir: 'exp'
+2022-07-29 09:33:30 - INFO - config tensorboard: False
+2022-07-29 09:33:30 - INFO - config verbose: False
+2022-07-29 09:33:30 - INFO - config distill_teacher: ''
+2022-07-29 09:33:30 - INFO - config distill_loss_alpha: 0.1
+2022-07-29 09:33:30 - INFO - config distill_loss_temperature: 5
+2022-07-29 09:33:30 - INFO - config distill_loss_type: 'soft'
+2022-07-29 09:33:30 - INFO - config repvgg_block: ''
+2022-07-29 09:33:30 - INFO - config case: 'official'
+2022-07-29 09:33:30 - INFO - config keyword: ['cifar10', 'bacs', 'lq']
+2022-07-29 09:33:30 - INFO - config focal_gamma: 2.0
+2022-07-29 09:33:30 - INFO - config focal_alpha: -1.0
+2022-07-29 09:33:30 - INFO - config cmd: 'rclone+copy+LOG+DST'
+2022-07-29 09:33:30 - INFO - config mean: None
+2022-07-29 09:33:30 - INFO - config std: None
+2022-07-29 09:33:30 - INFO - config num_classes: None
+2022-07-29 09:33:30 - INFO - config input_size: None
+2022-07-29 09:33:30 - INFO - config base: 1
+2022-07-29 09:33:30 - INFO - config width_alpha: 1.0
+2022-07-29 09:33:30 - INFO - config block_alpha: 1.0
+2022-07-29 09:33:30 - INFO - config se_reduction: 16
+2022-07-29 09:33:30 - INFO - config stem_kernel: 1
+2022-07-29 09:33:30 - INFO - config order: 'none'
+2022-07-29 09:33:30 - INFO - config policy: 'none'
+2022-07-29 09:33:30 - INFO - config fm_bit: 8.0
+2022-07-29 09:33:30 - INFO - config fm_level: None
+2022-07-29 09:33:30 - INFO - config fm_half_range: True
+2022-07-29 09:33:30 - INFO - config fm_separator: 0.38
+2022-07-29 09:33:30 - INFO - config fm_correlate: -1
+2022-07-29 09:33:30 - INFO - config fm_ratio: 1
+2022-07-29 09:33:30 - INFO - config fm_scale: 0.5
+2022-07-29 09:33:30 - INFO - config fm_enable: True
+2022-07-29 09:33:30 - INFO - config fm_boundary: None
+2022-07-29 09:33:30 - INFO - config fm_quant_group: None
+2022-07-29 09:33:30 - INFO - config fm_adaptive: 'none'
+2022-07-29 09:33:30 - INFO - config fm_custom: 'none'
+2022-07-29 09:33:30 - INFO - config fm_grad_type: 'none'
+2022-07-29 09:33:30 - INFO - config fm_grad_scale: 'none'
+2022-07-29 09:33:30 - INFO - config wt_bit: 7.0
+2022-07-29 09:33:30 - INFO - config wt_level: None
+2022-07-29 09:33:30 - INFO - config wt_half_range: False
+2022-07-29 09:33:30 - INFO - config wt_separator: 0.38
+2022-07-29 09:33:30 - INFO - config wt_correlate: -1
+2022-07-29 09:33:30 - INFO - config wt_ratio: 1
+2022-07-29 09:33:30 - INFO - config wt_scale: 0.5
+2022-07-29 09:33:30 - INFO - config wt_enable: True
+2022-07-29 09:33:30 - INFO - config wt_boundary: None
+2022-07-29 09:33:30 - INFO - config wt_quant_group: None
+2022-07-29 09:33:30 - INFO - config wt_adaptive: 'none'
+2022-07-29 09:33:30 - INFO - config wt_grad_type: 'none'
+2022-07-29 09:33:30 - INFO - config wt_grad_scale: 'none'
+2022-07-29 09:33:30 - INFO - config bits: ['5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '8']
+2022-07-29 09:33:30 - INFO - config ot_bit: None
+2022-07-29 09:33:30 - INFO - config ot_level: None
+2022-07-29 09:33:30 - INFO - config ot_half_range: False
+2022-07-29 09:33:30 - INFO - config ot_separator: 0.38
+2022-07-29 09:33:30 - INFO - config ot_correlate: -1
+2022-07-29 09:33:30 - INFO - config ot_ratio: 1
+2022-07-29 09:33:30 - INFO - config ot_scale: 0.5
+2022-07-29 09:33:30 - INFO - config ot_enable: False
+2022-07-29 09:33:30 - INFO - config ot_boundary: None
+2022-07-29 09:33:30 - INFO - config ot_quant_group: None
+2022-07-29 09:33:30 - INFO - config ot_adaptive: 'none'
+2022-07-29 09:33:30 - INFO - config ot_grad_type: 'none'
+2022-07-29 09:33:30 - INFO - config ot_grad_scale: 'none'
+2022-07-29 09:33:30 - INFO - config ot_independent_parameter: False
+2022-07-29 09:33:30 - INFO - config re_init: False
+2022-07-29 09:33:30 - INFO - config proxquant_step: 5
+2022-07-29 09:33:30 - INFO - config mixup_alpha: 0.7
+2022-07-29 09:33:30 - INFO - config mixup_enable: False
+2022-07-29 09:33:30 - INFO - config padding_after_quant: False
+2022-07-29 09:33:30 - INFO - config probe_iteration: 1
+2022-07-29 09:33:30 - INFO - config probe_index: []
+2022-07-29 09:33:30 - INFO - config probe_list: ['']
+2022-07-29 09:33:30 - INFO - config label_smooth: 0.1
+2022-07-29 09:33:30 - INFO - config custom_decay_list: ['']
+2022-07-29 09:33:30 - INFO - config custom_decay: 0.02
+2022-07-29 09:33:30 - INFO - config custom_lr_list: ['']
+2022-07-29 09:33:30 - INFO - config custom_lr: 1e-05
+2022-07-29 09:33:30 - INFO - config global_buffer: {}
+2022-07-29 09:33:30 - INFO - no gpu available, try CPU version, lots of functions limited
+2022-07-29 09:33:30 - INFO - update fm_bit 8.0
+2022-07-29 09:33:30 - INFO - update wt_bit 7.0
+2022-07-29 09:33:30 - INFO - update num_classes 10
+2022-07-29 09:33:30 - INFO - update input_size 32
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(64) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(128) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(256) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(5), num_levels(32), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(5), num_levels(32), quant_group(512) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - half_range(True), bit(8), num_levels(256), quant_group(1) boundary(None) scale(0.5) ratio(1) tag(fm)
+2022-07-29 09:33:30 - INFO - half_range(False), bit(8), num_levels(256), quant_group(10) boundary(None) scale(0.5) ratio(1) tag(wt)
+2022-07-29 09:33:30 - INFO - update fm_index 0
+2022-07-29 09:33:30 - INFO - update wt_index 0
+2022-07-29 09:33:30 - INFO - update ot_index 0
+2022-07-29 09:33:30 - INFO - update fm_index 1
+2022-07-29 09:33:30 - INFO - update wt_index 1
+2022-07-29 09:33:30 - INFO - update ot_index 1
+2022-07-29 09:33:30 - INFO - update fm_index 2
+2022-07-29 09:33:30 - INFO - update wt_index 2
+2022-07-29 09:33:30 - INFO - update ot_index 2
+2022-07-29 09:33:30 - INFO - update fm_index 3
+2022-07-29 09:33:30 - INFO - update wt_index 3
+2022-07-29 09:33:30 - INFO - update ot_index 3
+2022-07-29 09:33:30 - INFO - update fm_index 5
+2022-07-29 09:33:30 - INFO - update wt_index 5
+2022-07-29 09:33:30 - INFO - update ot_index 5
+2022-07-29 09:33:30 - INFO - update fm_index 6
+2022-07-29 09:33:30 - INFO - update wt_index 6
+2022-07-29 09:33:30 - INFO - update ot_index 6
+2022-07-29 09:33:30 - INFO - update fm_index 7
+2022-07-29 09:33:30 - INFO - update wt_index 7
+2022-07-29 09:33:30 - INFO - update ot_index 7
+2022-07-29 09:33:30 - INFO - update fm_index 8
+2022-07-29 09:33:30 - INFO - update wt_index 8
+2022-07-29 09:33:30 - INFO - update ot_index 8
+2022-07-29 09:33:30 - INFO - update fm_index 10
+2022-07-29 09:33:30 - INFO - update wt_index 10
+2022-07-29 09:33:30 - INFO - update ot_index 10
+2022-07-29 09:33:30 - INFO - update fm_index 11
+2022-07-29 09:33:30 - INFO - update wt_index 11
+2022-07-29 09:33:30 - INFO - update ot_index 11
+2022-07-29 09:33:30 - INFO - update fm_index 12
+2022-07-29 09:33:30 - INFO - update wt_index 12
+2022-07-29 09:33:30 - INFO - update ot_index 12
+2022-07-29 09:33:30 - INFO - update fm_index 13
+2022-07-29 09:33:30 - INFO - update wt_index 13
+2022-07-29 09:33:30 - INFO - update ot_index 13
+2022-07-29 09:33:30 - INFO - update fm_index 15
+2022-07-29 09:33:30 - INFO - update wt_index 15
+2022-07-29 09:33:30 - INFO - update ot_index 15
+2022-07-29 09:33:30 - INFO - update fm_index 16
+2022-07-29 09:33:30 - INFO - update wt_index 16
+2022-07-29 09:33:30 - INFO - update ot_index 16
+2022-07-29 09:33:30 - INFO - update fm_index 17
+2022-07-29 09:33:30 - INFO - update wt_index 17
+2022-07-29 09:33:30 - INFO - update ot_index 17
+2022-07-29 09:33:30 - INFO - update fm_index 18
+2022-07-29 09:33:30 - INFO - update wt_index 18
+2022-07-29 09:33:30 - INFO - update ot_index 18
+2022-07-29 09:33:30 - INFO - models: ResNet(
   (conv1): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
   (maxpool): Sequential()
   (layer1): Sequential(
@@ -511,75 +511,54 @@
     (quant_otpt): quantization-ot-index(-1)
   )
 )
-2022-07-29 07:15:09 - INFO - epoch_policies: []
-2022-07-29 07:15:09 - INFO - no pretrained file exists(./weights/resnet18/), init model with default initlizer
-2022-07-29 07:15:09 - INFO - loading dataset with batch_size 100 and val-batch-size 100. dataset: cifar10, resolution: 32, path: ../../data/cifar10
-2022-07-29 07:15:11 - INFO - training without apex
-2022-07-29 07:15:11 - INFO - start to train network resnet18 with case official
-2022-07-29 07:15:11 - INFO - [epoch 0]: lr 1.000000e-02
-2022-07-29 07:15:27 - INFO - train 0/500, loss:2.316(2.316), batch time:15.92(15.92), data load time: 9.94(9.94)
-2022-07-29 07:16:27 - INFO - precent: [], memory: []
-2022-07-29 07:17:27 - INFO - train 20/500, loss:2.270(2.290), batch time:6.06(6.49), data load time: 0.00(0.47)
-2022-07-29 07:19:27 - INFO - train 40/500, loss:2.297(2.286), batch time:5.98(6.25), data load time: 0.00(0.24)
-2022-07-29 07:21:27 - INFO - train 60/500, loss:2.301(2.291), batch time:6.06(6.17), data load time: 0.00(0.16)
-2022-07-29 07:23:27 - INFO - train 80/500, loss:2.300(2.293), batch time:5.93(6.13), data load time: 0.00(0.12)
-2022-07-29 07:25:28 - INFO - train 100/500, loss:2.292(2.294), batch time:6.03(6.11), data load time: 0.00(0.10)
-2022-07-29 07:27:27 - INFO - train 120/500, loss:2.281(2.292), batch time:5.98(6.09), data load time: 0.00(0.08)
-2022-07-29 07:29:27 - INFO - train 140/500, loss:2.225(2.285), batch time:5.98(6.07), data load time: 0.00(0.07)
-2022-07-29 07:31:26 - INFO - train 160/500, loss:2.134(2.274), batch time:5.91(6.06), data load time: 0.00(0.06)
-2022-07-29 07:33:26 - INFO - train 180/500, loss:2.163(2.263), batch time:5.96(6.05), data load time: 0.00(0.06)
-2022-07-29 07:35:27 - INFO - train 200/500, loss:2.123(2.250), batch time:6.04(6.05), data load time: 0.00(0.05)
-2022-07-29 07:37:28 - INFO - train 220/500, loss:2.103(2.236), batch time:6.03(6.05), data load time: 0.00(0.05)
-2022-07-29 07:39:28 - INFO - train 240/500, loss:2.090(2.224), batch time:5.97(6.05), data load time: 0.00(0.04)
-2022-07-29 07:41:29 - INFO - train 260/500, loss:2.009(2.213), batch time:5.98(6.05), data load time: 0.00(0.04)
-2022-07-29 07:43:28 - INFO - train 280/500, loss:2.000(2.201), batch time:5.97(6.04), data load time: 0.00(0.04)
-2022-07-29 07:45:28 - INFO - train 300/500, loss:2.024(2.188), batch time:6.01(6.04), data load time: 0.00(0.03)
-2022-07-29 07:47:29 - INFO - train 320/500, loss:1.952(2.176), batch time:6.04(6.04), data load time: 0.00(0.03)
-2022-07-29 07:49:29 - INFO - train 340/500, loss:2.055(2.168), batch time:6.01(6.04), data load time: 0.00(0.03)
-2022-07-29 07:51:30 - INFO - train 360/500, loss:1.978(2.159), batch time:6.02(6.04), data load time: 0.00(0.03)
-2022-07-29 07:53:30 - INFO - train 380/500, loss:1.897(2.151), batch time:6.03(6.03), data load time: 0.00(0.03)
-2022-07-29 07:55:30 - INFO - train 400/500, loss:1.977(2.143), batch time:6.01(6.03), data load time: 0.00(0.03)
-2022-07-29 07:57:30 - INFO - train 420/500, loss:2.081(2.136), batch time:6.00(6.03), data load time: 0.00(0.02)
-2022-07-29 07:59:30 - INFO - train 440/500, loss:1.983(2.129), batch time:5.99(6.03), data load time: 0.00(0.02)
-2022-07-29 08:01:29 - INFO - train 460/500, loss:2.090(2.124), batch time:6.03(6.03), data load time: 0.00(0.02)
-2022-07-29 08:03:28 - INFO - train 480/500, loss:1.891(2.118), batch time:6.02(6.02), data load time: 0.00(0.02)
-2022-07-29 08:06:12 - INFO - [epoch 0]: train_loss 2.112
-2022-07-29 08:06:22 - INFO - test 0/100 21.000 75.000
-2022-07-29 08:07:53 - INFO - test 20/100 18.143 77.762
-2022-07-29 08:09:26 - INFO - test 40/100 17.317 76.683
-2022-07-29 08:10:58 - INFO - test 60/100 17.656 76.770
-2022-07-29 08:12:31 - INFO - test 80/100 17.716 76.765
-2022-07-29 08:14:50 - INFO - evaluation time: 517.841 s
-2022-07-29 08:14:50 - INFO - [epoch 0]: test_acc 17.870000 76.750000, best top1: 17.870000, loss: 2.055197
-2022-07-29 08:14:50 - INFO - obtain new best accuracy, but not going to save it at epoch 0
-2022-07-29 08:14:50 - INFO - precent: [], memory: []
-2022-07-29 08:14:50 - INFO - [epoch 1]: lr 9.800000e-03
-2022-07-29 08:15:06 - INFO - train 0/500, loss:1.986(1.986), batch time:15.99(15.99), data load time: 9.96(9.96)
-2022-07-29 08:17:06 - INFO - train 20/500, loss:1.827(1.952), batch time:6.02(6.49), data load time: 0.00(0.47)
-2022-07-29 08:19:06 - INFO - train 40/500, loss:1.977(1.949), batch time:6.06(6.25), data load time: 0.00(0.24)
-2022-07-29 08:21:08 - INFO - train 60/500, loss:2.046(1.958), batch time:6.12(6.20), data load time: 0.00(0.16)
-2022-07-29 08:23:10 - INFO - train 80/500, loss:1.991(1.953), batch time:6.01(6.18), data load time: 0.00(0.12)
-2022-07-29 08:25:11 - INFO - train 100/500, loss:1.942(1.950), batch time:6.04(6.15), data load time: 0.00(0.10)
-2022-07-29 08:27:11 - INFO - train 120/500, loss:1.889(1.949), batch time:6.03(6.13), data load time: 0.00(0.08)
-2022-07-29 08:29:11 - INFO - train 140/500, loss:1.945(1.950), batch time:5.95(6.11), data load time: 0.00(0.07)
-2022-07-29 08:31:12 - INFO - train 160/500, loss:1.829(1.945), batch time:6.02(6.10), data load time: 0.00(0.06)
-2022-07-29 08:33:15 - INFO - train 180/500, loss:1.912(1.945), batch time:6.17(6.11), data load time: 0.00(0.06)
-2022-07-29 08:35:19 - INFO - train 200/500, loss:1.924(1.944), batch time:6.34(6.12), data load time: 0.00(0.05)
-2022-07-29 08:37:26 - INFO - train 220/500, loss:1.907(1.946), batch time:6.25(6.14), data load time: 0.00(0.05)
-2022-07-29 08:39:32 - INFO - train 240/500, loss:2.023(1.947), batch time:6.22(6.15), data load time: 0.00(0.04)
-2022-07-29 08:41:37 - INFO - train 260/500, loss:1.970(1.947), batch time:6.22(6.16), data load time: 0.00(0.04)
-2022-07-29 08:43:41 - INFO - train 280/500, loss:1.888(1.943), batch time:6.35(6.16), data load time: 0.00(0.04)
-2022-07-29 08:45:46 - INFO - train 300/500, loss:1.910(1.942), batch time:6.25(6.17), data load time: 0.00(0.03)
-2022-07-29 08:47:51 - INFO - train 320/500, loss:1.953(1.940), batch time:6.18(6.17), data load time: 0.00(0.03)
-2022-07-29 08:49:56 - INFO - train 340/500, loss:1.977(1.939), batch time:6.26(6.18), data load time: 0.00(0.03)
-2022-07-29 08:52:01 - INFO - train 360/500, loss:1.910(1.938), batch time:6.25(6.18), data load time: 0.00(0.03)
-2022-07-29 08:54:06 - INFO - train 380/500, loss:1.890(1.937), batch time:6.25(6.18), data load time: 0.00(0.03)
-2022-07-29 08:56:11 - INFO - train 400/500, loss:1.928(1.937), batch time:6.08(6.19), data load time: 0.00(0.03)
-2022-07-29 08:58:15 - INFO - train 420/500, loss:2.019(1.937), batch time:6.18(6.19), data load time: 0.00(0.02)
-2022-07-29 09:00:18 - INFO - train 440/500, loss:2.011(1.940), batch time:6.22(6.19), data load time: 0.00(0.02)
-2022-07-29 09:02:20 - INFO - train 460/500, loss:2.024(1.943), batch time:5.95(6.18), data load time: 0.00(0.02)
-2022-07-29 09:04:23 - INFO - train 480/500, loss:2.002(1.945), batch time:6.03(6.18), data load time: 0.00(0.02)
-2022-07-29 09:07:10 - INFO - [epoch 1]: train_loss 1.946
-2022-07-29 09:07:20 - INFO - test 0/100 15.000 77.000
-2022-07-29 09:08:54 - INFO - test 20/100 18.333 81.476
-2022-07-29 09:10:28 - INFO - test 40/100 18.561 81.073
+2022-07-29 09:33:30 - INFO - epoch_policies: []
+2022-07-29 09:33:30 - INFO - no pretrained file exists(./weights/resnet18/), init model with default initlizer
+2022-07-29 09:33:30 - INFO - loading dataset with batch_size 100 and val-batch-size 100. dataset: cifar10, resolution: 32, path: ../../data/cifar10
+2022-07-29 09:33:32 - INFO - training without apex
+2022-07-29 09:33:32 - INFO - start to train network resnet18 with case official
+2022-07-29 09:33:32 - INFO - [epoch 0]: lr 1.000000e-02
+2022-07-29 09:33:55 - INFO - train 0/500, loss:2.306(2.306), batch time:22.99(22.99), data load time: 13.26(13.26)
+2022-07-29 09:35:22 - INFO - precent: [], memory: []
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   2022-07-29 09:34:52 - INFO - train 180/500, loss:1.818(1.944), batch time:8.59(6.27), data load time: 0.00(0.06)
+2022-07-29 09:37:15 - INFO - train 200/500, loss:2.009(1.940), batch time:6.39(6.36), data load time: 0.00(0.05)
+2022-07-29 09:39:20 - INFO - train 220/500, loss:1.932(1.935), batch time:6.63(6.35), data load time: 0.00(0.05)
+2022-07-29 09:41:24 - INFO - train 240/500, loss:1.851(1.930), batch time:5.99(6.34), data load time: 0.00(0.04)
+2022-07-29 09:43:28 - INFO - train 260/500, loss:1.948(1.927), batch time:7.01(6.32), data load time: 0.00(0.04)
+2022-07-29 09:45:30 - INFO - train 280/500, loss:1.876(1.924), batch time:6.14(6.31), data load time: 0.00(0.04)
+2022-07-29 09:47:31 - INFO - train 300/500, loss:1.753(1.918), batch time:6.14(6.29), data load time: 0.00(0.03)
+2022-07-29 09:49:35 - INFO - train 320/500, loss:1.857(1.914), batch time:6.36(6.29), data load time: 0.00(0.03)
+2022-07-29 09:51:38 - INFO - train 340/500, loss:1.881(1.909), batch time:6.11(6.28), data load time: 0.00(0.03)
+2022-07-29 09:53:39 - INFO - train 360/500, loss:1.879(1.905), batch time:6.07(6.27), data load time: 0.00(0.03)
+2022-07-29 09:55:40 - INFO - train 380/500, loss:1.936(1.902), batch time:6.07(6.26), data load time: 0.00(0.03)
+2022-07-29 09:57:44 - INFO - train 400/500, loss:1.676(1.895), batch time:6.33(6.25), data load time: 0.00(0.03)
+2022-07-29 09:59:47 - INFO - train 420/500, loss:1.897(1.892), batch time:6.35(6.25), data load time: 0.00(0.02)
+2022-07-29 10:01:52 - INFO - train 440/500, loss:1.755(1.888), batch time:6.30(6.25), data load time: 0.00(0.02)
+2022-07-29 10:03:55 - INFO - train 460/500, loss:1.687(1.883), batch time:6.10(6.24), data load time: 0.00(0.02)
+2022-07-29 10:05:57 - INFO - train 480/500, loss:1.765(1.881), batch time:6.12(6.24), data load time: 0.00(0.02)
+2022-07-29 10:08:45 - INFO - [epoch 2]: train_loss 1.877
+2022-07-29 10:08:55 - INFO - test 0/100 29.000 87.000
+2022-07-29 10:10:31 - INFO - test 20/100 29.524 89.429
+2022-07-29 10:12:08 - INFO - test 40/100 29.317 89.439
+2022-07-29 10:13:43 - INFO - test 60/100 29.492 89.410
+2022-07-29 10:15:19 - INFO - test 80/100 29.309 89.358
+2022-07-29 10:17:43 - INFO - evaluation time: 537.481 s
+2022-07-29 10:17:43 - INFO - [epoch 2]: test_acc 29.030000 89.530000, best top1: 29.030000, loss: 1.714612
+2022-07-29 10:17:43 - INFO - obtain new best accuracy, but not going to save it at epoch 2
+2022-07-29 10:17:43 - INFO - [epoch 3]: lr 9.411920e-03
+2022-07-29 10:17:59 - INFO - train 0/500, loss:1.695(1.695), batch time:16.48(16.48), data load time: 10.15(10.15)
+2022-07-29 10:20:03 - INFO - train 20/500, loss:1.641(1.759), batch time:6.26(6.67), data load time: 0.00(0.48)
+2022-07-29 10:22:06 - INFO - train 40/500, loss:1.794(1.768), batch time:6.27(6.42), data load time: 0.00(0.25)
+2022-07-29 10:24:10 - INFO - train 60/500, loss:1.690(1.754), batch time:6.04(6.36), data load time: 0.00(0.17)
+2022-07-29 10:26:13 - INFO - train 80/500, loss:1.655(1.742), batch time:6.13(6.30), data load time: 0.00(0.13)
+2022-07-29 10:28:19 - INFO - train 100/500, loss:1.677(1.739), batch time:6.44(6.30), data load time: 0.00(0.10)
+2022-07-29 10:30:25 - INFO - train 120/500, loss:1.749(1.732), batch time:6.25(6.30), data load time: 0.00(0.08)
+2022-07-29 10:32:32 - INFO - train 140/500, loss:1.675(1.731), batch time:6.33(6.31), data load time: 0.00(0.07)
+2022-07-29 10:34:36 - INFO - train 160/500, loss:1.563(1.722), batch time:6.27(6.29), data load time: 0.00(0.06)
+2022-07-29 10:36:39 - INFO - train 180/500, loss:1.716(1.718), batch time:6.35(6.28), data load time: 0.00(0.06)
+2022-07-29 10:38:45 - INFO - train 200/500, loss:1.650(1.707), batch time:6.34(6.28), data load time: 0.00(0.05)
+2022-07-29 10:40:51 - INFO - train 220/500, loss:1.554(1.700), batch time:6.46(6.28), data load time: 0.00(0.05)
+2022-07-29 10:42:58 - INFO - train 240/500, loss:1.904(1.691), batch time:6.33(6.29), data load time: 0.00(0.04)
+2022-07-29 10:45:02 - INFO - train 260/500, loss:1.498(1.685), batch time:6.28(6.28), data load time: 0.00(0.04)
+2022-07-29 10:47:06 - INFO - train 280/500, loss:1.672(1.676), batch time:6.03(6.28), data load time: 0.00(0.04)
+2022-07-29 10:49:09 - INFO - train 300/500, loss:1.626(1.671), batch time:6.44(6.27), data load time: 0.00(0.03)
+2022-07-29 10:51:12 - INFO - train 320/500, loss:1.520(1.665), batch time:6.10(6.26), data load time: 0.00(0.03)
