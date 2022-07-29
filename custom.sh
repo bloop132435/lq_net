@@ -64,4 +64,4 @@ python main.py --dataset cifar10 --root $FASTDIR/data/cifar10 \
 
 
 # previous bits
-  # --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8
+# --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8
