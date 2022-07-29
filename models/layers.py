@@ -1,14 +1,15 @@
+from __future__ import absolute_import, division
 
-import torch
-import torch.nn as nn
-import sys
 import logging
 import numpy as np
+import sys
+import torch
+from   torch                    import nn
 
 if sys.version_info[0] == 3:
     from . import dorefa as dorefa
 
-from .quant import conv3x3, conv1x1, conv0x0
+from   .quant                   import conv1x1, conv3x3
 
 def seq_c_b_a_s(x, conv, relu, bn, skip=None, skip_enable=False):
     out = conv(x)

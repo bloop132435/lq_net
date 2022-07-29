@@ -572,7 +572,7 @@ def train(loader, model, criterion, optimizer, args, scheduler, epoch, lr):
             args.global_buffer.pop('quant_loss')
 
         if i % args.iter_size == 0:
-            optimizer.zero_grad()
+            optimizer.zero_grad(set_to_none=True)
 
         if args.fp16:
             with amp.scale_loss(loss, optimizer) as scaled_loss:

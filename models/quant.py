@@ -139,8 +139,8 @@ class quantization(nn.Module):
         # for LQ-Net
         if not hasattr(self, 'num_levels'):
             self.num_levels = 2**self.bit
-        if self.num_levels > 256:
-            raise RuntimeError("currently not support more than 8 bit quantization")
+        #  if self.num_levels > 256:
+            #  raise RuntimeError("currently not support more than 8 bit quantization")
         if self.num_levels == 3:
             self.bit = 1
             self.logger.info('update %s_bit %r' % (self.tag, self.bit))
