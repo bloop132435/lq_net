@@ -59,9 +59,9 @@ python main.py --dataset cifar10 --root $FASTDIR/data/cifar10 \
   --delay 0 \
   --fm_bit 8 --wt_bit 7 --fm_enable --wt_enable\
   --workers 15 --save_freq 1\
-  $options \
-  --bits 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+  "$options" \
+  --bits 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
 
-# previous bits
+# previous configs
 # 1 --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8 DNF
-# 2 --bits 5 4 4 4 3 4 3 4 3 3 3 3 3 3 3 3 8 = 87.09%
+# 2 --bits 5 4 4 4 3 4 3 4 3 3 3 3 3 3 3 3 8 (resnet18, 50 epochs) = 87.77%
