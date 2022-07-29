@@ -14,11 +14,11 @@ import torch.backends.cudnn as cudnn
 import torch.nn as nn
 import torch.nn.functional as F
 
-try:
-    from tensorboardX import SummaryWriter
-except (ImportError, RuntimeError, FileNotFoundError) as e:
-    print('tensorboard')
-    print('import project module error', e)
+#  try:
+    #  from tensorboardX import SummaryWriter
+#  except (ImportError, RuntimeError, FileNotFoundError) as e:
+    #  print('tensorboard')
+    #  print('import project module error', e)
 try:
     import utils
 except (ImportError, RuntimeError, FileNotFoundError) as e:
@@ -34,30 +34,31 @@ try:
 except (ImportError, RuntimeError, FileNotFoundError) as e:
     print('datasets')
     print('import project module error', e)
+dali_enable = False
+#  dali_enable = True
+#  try:
+    #  if torch.cuda.is_available():
+        #  from nvidia.dali.plugin.pytorch import DALIClassificationIterator
+        #  from nvidia.dali.pipeline import Pipeline
+        #  import nvidia.dali.ops as ops
+        #  import nvidia.dali.types as types
+    #  else:
+        #  dali_enable = False
+#  except ImportError:
+    #  dali_enable = False
 
-dali_enable = True
-try:
-    if torch.cuda.is_available():
-        from nvidia.dali.plugin.pytorch import DALIClassificationIterator
-        from nvidia.dali.pipeline import Pipeline
-        import nvidia.dali.ops as ops
-        import nvidia.dali.types as types
-    else:
-        dali_enable = False
-except ImportError:
-    dali_enable = False
-
-try:
-    from apex import amp
-    apex_enable=True
-except ImportError:
-    apex_enable=False
-
-try:
-    import plugin
-    plugin_enable=True
-except (ImportError, RuntimeError, FileNotFoundError) as e:
-    plugin_enable=False
+apex_enable = False
+#  try:
+    #  from apex import amp
+    #  apex_enable=True
+#  except ImportError:
+    #  apex_enable=False
+plugin_enable = False
+#  try:
+    #  import plugin
+    #  plugin_enable=True
+#  except (ImportError, RuntimeError, FileNotFoundError) as e:
+    #  plugin_enable=False
 
 def get_parser(parser=None):
     # default parameters for various projects
