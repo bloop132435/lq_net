@@ -59,7 +59,7 @@ python main.py --dataset cifar10 --root $FASTDIR/data/cifar10 \
   --delay 0 \
   --fm_bit 8 --wt_bit 7 --fm_enable --wt_enable\
   --workers 15 --save_freq 1\
-  --bits 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+  --bits 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
 
 # previous configs
 # 1 --bits 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 8 DNF
