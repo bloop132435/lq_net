@@ -8,7 +8,7 @@ import time
 
 # add on date 2019.12.26
 __EPS__ = 1e-5
-CONST_SF = 0.1
+CONST_SF = 0.4
 
 ## LQ-net
 class LqNet_fm(torch.autograd.Function):
